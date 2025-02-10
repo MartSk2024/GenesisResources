@@ -1,10 +1,14 @@
-package cz.genesis.dbUsers.model;
+package cz.genesis.dbusers.model;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 public class User {
     private int id;
     private String name;
     private String surname;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String personID;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String uuid;
 
     public User(){}
